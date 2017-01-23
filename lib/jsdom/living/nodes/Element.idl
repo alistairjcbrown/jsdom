@@ -69,8 +69,8 @@ partial interface Element {
 //  attribute unrestricted double scrollLeft;
 //  readonly attribute long scrollWidth;
 //  readonly attribute long scrollHeight;
-//  readonly attribute long clientTop;
-//  readonly attribute long clientLeft;
-//  readonly attribute long clientWidth;
-//  readonly attribute long clientHeight;
+  readonly attribute long clientTop;
+  readonly attribute long clientLeft;
+  readonly attribute long clientWidth;
+  readonly attribute long clientHeight;
 };
