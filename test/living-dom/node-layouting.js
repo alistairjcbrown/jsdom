@@ -52,3 +52,47 @@ exports["A node should have zero client height"] = t => {
   t.strictEqual(element.clientHeight, 0);
   t.done();
 };
+
+exports["A node should have zero scroll width"] = t => {
+  const doc = jsdom("<div id='1'>1</div>");
+  const element = doc.getElementById("1");
+  t.strictEqual(element.scrollWidth, 0);
+  t.done();
+};
+
+exports["A node should have zero scroll height"] = t => {
+  const doc = jsdom("<div id='1'>1</div>");
+  const element = doc.getElementById("1");
+  t.strictEqual(element.scrollHeight, 0);
+  t.done();
+};
+
+exports["A node should have zero scroll top"] = t => {
+  const doc = jsdom("<div id='1'>1</div>");
+  const element = doc.getElementById("1");
+  t.strictEqual(element.scrollTop, 0);
+  t.done();
+};
+
+exports["A node should have zero scroll left"] = t => {
+  const doc = jsdom("<div id='1'>1</div>");
+  const element = doc.getElementById("1");
+  t.strictEqual(element.scrollLeft, 0);
+  t.done();
+};
+
+exports["A node should have settable scroll top"] = t => {
+  const doc = jsdom("<div id='1'>1</div>");
+  const element = doc.getElementById("1");
+  element.scrollTop = 10;
+  t.strictEqual(element.scrollTop, 10);
+  t.done();
+};
+
+exports["A node should have settable scroll left"] = t => {
+  const doc = jsdom("<div id='1'>1</div>");
+  const element = doc.getElementById("1");
+  element.scrollLeft = 10;
+  t.strictEqual(element.scrollLeft, 10);
+  t.done();
+};
